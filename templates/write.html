@@ -1,0 +1,16 @@
+{%  extends "layout.html" %}
+{%  block content %}
+<form action="" method="post">
+    <div class="ui form">
+        <div class="field">
+            <label>Title</label>
+            <textarea rows="1" placeholder="Input title here">{{ article.title }}</textarea>
+        </div>
+        <div class="field">
+            <label>Text</label>
+            <textarea placeholder="Input contents">{{ article.content }}</textarea>
+        </div>
+    </div>
+</form>
+
+{% endblock %}

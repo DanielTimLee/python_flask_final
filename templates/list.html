@@ -1,0 +1,20 @@
+<table class="ui selectable celled table">
+    <thead>
+    <tr>
+        <th>No</th>
+        <th>Title</th>
+        <th>Username</th>
+        <th>Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for list in lists %}
+    <tr>
+        <td>{{ list.no }}</td>
+        <td>{{ list.title }}</td>
+        <td>{{ list.usrname }}</td>
+        <td>{{ list.date }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
