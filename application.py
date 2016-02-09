@@ -1,7 +1,9 @@
 from flask import Flask, render_template
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-
+app.config['localhost'] = 'mysql://root:daniel@localhost/flask'
+db = SQLAlchemy(app)
 
 @app.route('/')
 def home():
@@ -9,8 +11,8 @@ def home():
 
 
 @app.route('/<menu>')
-def board():
-    return render_template('list.html')
+def board(menu):
+    return "hi"
 
 
 @app.route('/<menu>/<article_no>')
@@ -19,4 +21,4 @@ def hello_world2():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
